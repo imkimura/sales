@@ -10,5 +10,5 @@ class Sale extends Model
 
     public $primaryKey = 'id';
 
-    public $fillable = ['id', 'seller_id', 'sale_value'];
+    public $fillable = ['id', 'seller_id', 'sale_value', 'commission'];
 }
