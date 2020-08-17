@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Seller;
+use App\Http\Resources\SellerResource;
 
 class SellerController extends Controller
 {
@@ -21,7 +22,7 @@ class SellerController extends Controller
      */
     public function index()
     {
-        $sellers = $this->model->all();
+        $sellers = SellerResource::collection($this->model->all());
 
         return $this->responseAPI('Vendedores retornados com sucesso!', 200, $sellers);
     }

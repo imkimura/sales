@@ -16,4 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('seller', 'API\SellerController');
 
-Route::resource('sale', 'API\SaleController')->only(['store', 'show']);
+
+Route::resource('sale', 'API\SaleController')->only(['store', 'show']);    
+
+
