@@ -14,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/new-sale', 'HomeController@store')->name('new.sale');
+Route::get('/report/{id}', 'HomeController@report')->name('report.sale');
 
-Route::resource('seller', 'SellerController');
+Route::resource('seller', 'SellerController')->except(['store', 'update', 'destroy', 'edit']);

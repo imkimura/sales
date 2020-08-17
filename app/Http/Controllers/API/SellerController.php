@@ -45,7 +45,7 @@ class SellerController extends Controller
 
         } catch (\Exception $e) {
 
-            return $this->responseAPI('Erro interno do servidor', 500);
+            return $this->responseAPI('Erro interno do servidor', 500, ['error' => $e]);
 
         }
 

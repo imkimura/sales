@@ -13,43 +13,45 @@
         <!-- Styles -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
+        <link href={{ asset('/assets/style.css') }} rel="stylesheet">
+
         <style>
             span, p, a, * {
                 font-family: 'Poppins';
             }
             h1,h2,h3,h3,h5 {
                 font-family: 'Archivo';
-            }  
+            }
             .navbar-dark .navbar-brand {
                 color: #a17aff;
                 font-family: 'Archivo' !important;
                 font-weight: 500;
-            }      
+            }
         </style>
     </head>
     <body>
         <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">SellerSale</a>
+            <a class="navbar-brand" href="/">SellerSale</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a 
+                <a
                     @if(Route::currentRouteName() == 'home')
-                    class="nav-item nav-link active" 
+                    class="nav-item nav-link active"
                     @else
-                    class="nav-item nav-link" 
+                    class="nav-item nav-link"
                     @endif
                     href="/">Home</a>
-                <a 
+                <a
                     @if(Request::is('seller', 'seller/..'))
-                    class="nav-item nav-link active" 
+                    class="nav-item nav-link active"
                     @else
-                    class="nav-item nav-link" 
+                    class="nav-item nav-link"
                     @endif
                     href="/seller">Vendedores</a>
-                
+
               </div>
             </div>
         </nav>
@@ -64,4 +66,3 @@
         @yield('script')
     </body>
 </html>
-    
